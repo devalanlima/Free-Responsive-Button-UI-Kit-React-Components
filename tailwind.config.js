@@ -28,7 +28,12 @@ export default {
       'gray-medium': '#888888',
       'gray-dark': '#282828',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Figtree': ['Figtree', 'sans-serif'],
+        'Archivo': ['Archivo', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
