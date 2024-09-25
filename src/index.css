@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-[#1E1E1E]
+  }
+
+  :root {
+    --error-light: 233 183 186;
+    --error-medium: 187 41 50;
+    --error-dark: 112 6 12;
+    --warning-light: 249 230 181;
+    --warning-medium: 239 179 64;
+    --warning-dark: 116 91 44;
+    --success-light: 136 211 157;
+    --success-medium: 7 186 57;
+    --success-dark: 6 81 27;
+    --info-light: 184 211 236;
+    --info-medium: 66 114 157;
+    --info-dark: 4 49 89;
+    --primary-light: 164 129 238;
+    --primary-medium: 88 41 187;
+    --primary-dark: 35 7 88;
+    --secondary-light: 161 227 215;
+    --secondary-medium: 35 186 159;
+    --secondary-dark: 20 95 81;
+    --gray-light: 224 224 224;
+    --gray-medium: 136 136 136;
+    --gray-dark: 40 40 40;
+  }
+}
