@@ -87,14 +87,6 @@ export default function Button ({
     setBtnState(state.default)
   }
 
-/*   const handleMouseEnter = () => {
-    setBtnState(state.hover)
-  }
-
-  const handleMouseLeave = () => {
-    setBtnState(state.default)
-  } */
-
   const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     if (event.key === 'Enter' || event.key === ' ' || event.key === 'Space') {
       setBtnState(state.click)
@@ -111,7 +103,6 @@ export default function Button ({
     <button
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-
       onKeyDown={handleKeyDown}
       onKeyUp={handleKeyUp}
       disabled={disabled}    
