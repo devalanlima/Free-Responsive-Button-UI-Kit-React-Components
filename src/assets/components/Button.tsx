@@ -70,9 +70,9 @@ export default function Button ({
   const [btnState, setBtnState] = useState(state.default)
 
   const btnSize: Record<Size, string> = {
-    small: iconPosition === 'only' ? 'p-[9px] text-[12px]' : 'py-[9px] px-[14px] text-[12px]',
-    medium: iconPosition === 'only' ? 'p-[12px] text-[14px]' : 'px-[18px] pt-[11px] pb-[12px] text-[14px]',
-    large: iconPosition === 'only' ? 'p-[15px] text-[16px]' : 'px-[24px] pt-[15px] pb-[16px] text-[16px]',
+    small: iconPosition === 'only' ? 'p-[9px] text-[12px]' : 'py-[9px] px-[14px] text-[12px] leading-[1.17]',
+    medium: iconPosition === 'only' ? 'p-[12px] text-[14px]' : 'text-[14px] px-[18px] pt-[11px] pb-[12px] leading-[1.22]',
+    large: iconPosition === 'only' ? 'p-[15px] text-[16px]' : 'px-[24px] pt-[15px] pb-[16px] text-[16px] leading-[1.19]',
   }
 
   const btnCorners: Record<Corners, string> = {
@@ -119,9 +119,9 @@ export default function Button ({
   }
 
   const iconSize: Record<Size, string> = {
-    small: 'w-[14px]',
-    medium: 'w-[16px]',
-    large: 'w-[20px]',
+    small: 'w-[14px] h-[14px] flex justify-center items-center',
+    medium: 'w-[16px] h-[16px] flex justify-center items-center',
+    large: 'w-[20px] h-[20px] flex justify-center items-center',
   }
 
   return (
@@ -145,7 +145,7 @@ export default function Button ({
     >
       {
         enableLeftIcon() && 
-        <span className={`${iconPosition === 'only' && iconSize[size]}`}>
+        <span className={iconSize[size]}>
           {icon}
         </span>
       }
@@ -154,7 +154,7 @@ export default function Button ({
 
       {
         enableRightIcon() && 
-        <span>
+        <span className={iconSize[size]}>
           {icon}
         </span>
       }
