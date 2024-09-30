@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-[#1E1E1E]
+    @apply bg-[#bbbbbb]
   }
 
   :root {
