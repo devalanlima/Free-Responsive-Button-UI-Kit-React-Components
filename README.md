@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Button Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable button component built with React and TypeScript. It supports various styles, sizes, and icon positions.
 
-Currently, two official plugins are available:
+This project is based on a design from Figma available in the community. Thanks to the author [@pinarr](https://www.figma.com/@pinarr) for the inspiration. You can check out the design [here](https://www.figma.com/community/file/1169572872932409282).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![All buttons styles, sizes, and icon positions.](public/buttons.png "All buttons styles, sizes, and icon positions.")
 
-## Expanding the ESLint configuration
+## Props
+| Prop  | Type | Default | Description 
+| :-------------: |:-------------:|:-------------:|:-------------|
+| children | `React.ReactNode`    | `undefined` | The content inside the button, such as text or other elements. |
+| corners | `smooth` &#124; `edgy`    | `smooth` | Determines the border-radius of the button (smooth for rounded, edgy for sharp). |
+| size | `small` &#124; `medium` &#124; `large`    | `medium` | Specifies the size of the button. |
+| styleType |  `primary` &#124; `secondary` &#124; `outline` &#124; `ghost`    | `primary` | Defines the button's style variant. |
+| icon* | `React.ReactNode`    | `undefined` | An optional icon to display within the button. |
+| iconPosition* | `left` &#124; `right` &#124; `only` &#124; `none`    | `undefined` | Position of the icon relative to the button content. |
+| disabled | `boolena` | `false` | Disables the button if set to true. |
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
+Here's how to use the button with different configurations:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Basic Example:
+```
+<Button>
+  Click Me
+</Button>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Button with Icon:
 ```
+<Button icon={<SomeIcon />} iconPosition="left">
+  Save
+</Button>
+```
+### Different Styles:
+```
+<Button styleType="primary">Primary</Button>
+<Button styleType="secondary">Secondary</Button>
+<Button styleType="outline">Outline</Button>
+<Button styleType="ghost">Ghost</Button>
+```
+### Button Sizes:
+```
+<Button size="small">Small</Button>
+<Button size="medium">Medium</Button>
+<Button size="large">Large</Button>
+```
+
+### Disabled Button:
+```
+<Button disabled>Disabled</Button>
+```
+
+## Event Handlers
+The component supports common button event handlers such as `onClick`, `onMouseDown`, and `onKeyUp`. You can pass these events directly as props.
+
+```
+<Button onClick={() => alert('Button clicked!')}>
+  Click Me
+</Button>
+```
+
+## License
+This component is open-source and available under the MIT License.
