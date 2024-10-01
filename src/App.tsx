@@ -23,6 +23,14 @@ export default function App() {
     <>
       <div className="flex flex-col justify-center items-center w-fit p-5 mx-auto">
         <div className="flex gap-5 items-center">
+          <Button 
+          size="large" icon={<i className="fa-brands fa-github text-[30px]"></i>} 
+          iconPosition="only"
+          title="Github"
+          onClick={() => window.open("https://github.com/devalanlima/Free-Responsive-Button-UI-Kit-React-Components", "_blank")}
+          >
+            GitHub
+          </Button>
           <Toggle
             inputValue={corner}
             onChange={handleChangeCorner}
