@@ -139,7 +139,7 @@ export default function Button ({
         ${btnTyphograpy}
         ${state.disabled}
         ${!disabled && state.hover}
-        flex gap-[8px]
+        flex gap-[8px] items-center justify-center
       `}
       {...rest}
     >
