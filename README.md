@@ -19,7 +19,7 @@ This project is based on a design from Figma available in the community. Thanks 
 | iconPosition* | `left` &#124; `right` &#124; `only` &#124; `none`    | `undefined` | Position of the icon relative to the button content. |
 | disabled | `boolena` | `false` | Disables the button if set to true. |
 
-* The icon and iconPosition properties are interdependent, utilizing one requires the use of the other.
+`*` The icon and iconPosition properties are interdependent, utilizing one requires the use of the other.
 
 ## Usage
 Here's how to use the button with different configurations:
